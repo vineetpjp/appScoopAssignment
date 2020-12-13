@@ -15,7 +15,7 @@
   box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.4);
   background-color: var(--active); //#3793be91;
   color: var(--primary-color-dark);
-
+  cursor: pointer;
   &__image img {
     width: 10rem;
     height: 100%;
