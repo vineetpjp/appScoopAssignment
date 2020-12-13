@@ -1,0 +1,16 @@
+.book-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__image {
+    img {
+      height: 20rem;
+      width: 15rem;
+    }
+  }
+  &__description {
+    color: var(--primary-color-dark);
+    font-size: 2rem;
+  }
+}
