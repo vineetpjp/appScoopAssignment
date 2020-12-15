@@ -15,8 +15,7 @@ const GoogleAuth = ({ isSignedIn, signIn, signOut }) => {
     window.gapi.load("client:auth2", () => {
       window.gapi.client
         .init({
-          clientId:
-            "902536091361-vegeqsd8iulre41s9jpj3aqi34qmn9cv.apps.googleusercontent.com",
+          clientId: process.env.REACT_APP_GOOGLE_API,
           scope: "email",
         })
         .then(() => {
