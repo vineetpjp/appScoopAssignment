@@ -1,7 +1,8 @@
 import React from "react";
 import GoogleAuth from "components/auth/googleAuth";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
+import { globalConst } from "components/utils/variables";
 import "./index.scss";
 
 const Header = () => {
@@ -9,12 +10,14 @@ const Header = () => {
     <div className="header">
       <div className="header--left">
         <div>
-          <b>ScoopBook</b>
+          <b>
+            <Link to="/books">ScoopBook</Link>
+          </b>
         </div>
       </div>
       <div className="header--right">
         <NavLink exact to="/books" activeClassName="header--right__active">
-          <b>Home</b>
+          <b>{globalConst.linkHome}</b>
         </NavLink>
 
         <div>

@@ -6,7 +6,7 @@ const InitialState = {
 const books = (state = InitialState, action) => {
   switch (action.type) {
     case SET_BOOKS:
-      return { ...state, books: action.payload.items };
+      return { books: action.payload.items };
 
     default:
       return state;

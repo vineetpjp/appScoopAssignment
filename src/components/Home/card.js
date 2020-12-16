@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { globalConst } from "components/utils/variables";
 
 import history from "../../history";
 import "./index.scss";
@@ -7,7 +7,7 @@ const Card = ({ book }) => {
   const {
     authors,
     title,
-    imageLinks: { smallThumbnail, thumbnail },
+    imageLinks: { smallThumbnail },
   } = book.volumeInfo;
   const onClickHandler = () => {
     history.push(`/books/${book.id}`);
@@ -23,13 +23,13 @@ const Card = ({ book }) => {
           <div className="card__description">
             <div className="card__description--title">
               <div>
-                <b>Title</b>
+                <b>{globalConst.cardTitle}</b>
               </div>
               <div>{title}</div>
             </div>
             <div className="card__description--author">
               <div>
-                <b>Author</b>
+                <b>{globalConst.cardAuthor}</b>
               </div>
               <div>{authors}</div>
             </div>

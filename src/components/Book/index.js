@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import Card from "components/Home/card";
+import { globalConst } from "components/utils/variables";
 import Heading from "components/utils/Heading";
 
 import "./index.scss";
@@ -18,19 +18,23 @@ const Book = ({ data, match }) => {
     const {
       authors,
       title,
-      imageLinks: { smallThumbnail, thumbnail },
+      imageLinks: { thumbnail },
     } = book.volumeInfo;
     return (
       <>
-        <Heading heading="Book Detail" />
+        <Heading heading={globalConst.detailPageTitle} />
         <BorderBox>
           <div className="book-detail">
             <div className="book-detail__image">
               <img src={thumbnail} />
             </div>
             <div className="book-detail__description">
-              <div>Authors : {authors}</div>
-              <div>Title : {title}</div>
+              <div>
+                {globalConst.detailCardAuthors} : {authors}
+              </div>
+              <div>
+                {globalConst.detailCardTitle} : {title}
+              </div>
             </div>
           </div>
         </BorderBox>

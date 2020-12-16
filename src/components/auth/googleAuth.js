@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import * as actions from "actions";
 
 const GoogleAuth = ({ isSignedIn, signIn, signOut }) => {
-  const onAuthChange = (isSignedIn, str) => {
+  const onAuthChange = (isSignedIn) => {
     if (isSignedIn) {
       signIn();
     } else {
